@@ -2,8 +2,50 @@
 
 \begin{document}
 
-\chapter{Modello solare}
+% the tikz-er2.sty package is available at:
+% http://tagus.inesc-id.pt/~pcalado/tikzer2/tikz-er2.
 
+\begingroup		%%% grafico tikz generale
+\tikzstyle{every entity} = [top color=white, bottom color=blue!30, 
+                            draw=blue!50!black!100, drop shadow]
+\tikzstyle{every weak entity} = [drop shadow={shadow xshift=.7ex, 
+                                 shadow yshift=-.7ex}]
+\tikzstyle{every attribute} = [top color=white, bottom color=yellow!20, 
+                               draw=yellow, node distance=1cm, drop shadow,text width=1.5cm]
+\tikzstyle{every relationship} = [top color=white, bottom color=red!20, 
+                                  draw=red!50!black!100, drop shadow,text width=2cm]
+\tikzstyle{every isa} = [top color=white, bottom color=green!20, 
+                         draw=green!50!black!100, drop shadow,]
+
+\centering
+\scalebox{.25}{
+\begin{tikzpicture}[node distance=1.5cm, every edge/.style={link}]
+
+  \node[entity] (ssm) at (0,0) {SSM};
+\draw[<-]  (ssm.190)--++(190:2cm) node[attribute] (hydro) {Equilibrio idrostatico};
+\draw[<-]  (ssm.170)--++(170:2cm) node[attribute] (thermal) {Equilibrio termico locale};
+\draw[<-]  (ssm.175)--++(175:2cm) node[attribute] (opacity) {Equilibrio radiativo + criterio di Schwartzchild};
+
+\node[relationship] (calibration) [above =1.5cm of ssm] {Calibrazione luminosit\'a e raggio} edge[<-] (ssm);
+
+\node[entity] (unphys) [above right=1cm and 2cm of ssm] {Incertezze fisica del modello} edge [<-] (ssm);
+\node[entity] (corrections) [left=3cm of ssm] {Correzioni} edge [->] (ssm);
+\node[entity] (surfaceobs) [above right=1cm and 1cm of calibration] {Osservabili stellari};
+\node[entity] (modelobs) [left=3cm of surfaceobs] {Discrepanze modello/osservazioni} edge [->] (corrections);
+\node[entity,anchor=north west] (sismobs) at (surfaceobs.south east) {Osservabili sismologiche};
+\draw[link,<->]  (sismobs.20)--++(30:3cm) node[attribute] (freqs) {Frequenze oscillazioni adiabatiche};
+\draw[link,<->] (sismobs.5)--++(5:2cm) node[attribute] (radiuscz) {Raggio fondo zona convettiva};
+
+\draw[link,<->] (surfaceobs.300) -- node [pos=0.8, auto, swap,left] {accuratezza} (stellaracc);
+\draw[link,<->] (sismobs.180) -- node [pos=0.2, auto, swap,right] {accuratezza} (sismacc);
+\node[draw,purple,fit=(hydro)(thermal)(opacity)(ssm),ellipse,label={[purple,label distance=1cm]150:Modello Solare standard}] at (hydro.west) {};
+
+\end{tikzpicture}
+
+\endgroup
+
+
+\chapter{Modello solare}
 
 \begin{refsection}[KinHydRev.bib,StellarModelS.bib]
 \nocite{*}
