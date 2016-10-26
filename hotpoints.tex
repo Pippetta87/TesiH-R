@@ -67,12 +67,15 @@
 
 \begin{refsection}[KinHydRev.bib,StellarModelS.bib,RotationMagneticS.bib,innocenti.bib,solarsystem.bib,solarmodels.bib,starRev.bib,sunmeasure.bib]
 
+\newrefcontext[sorting=hot]
+
 \begin{refsegment}
 
 \nocite{*}
 \begingroup
 \let\clearpage\relax
-\printbibliography[sorting=hot,title={\textcolor{Orchid}{Bibliografia modello solare e oltre}}]
+
+\printbibliography[title={\textcolor{Orchid}{Bibliografia modello solare e oltre}}]
 \endgroup
 
 \end{refsegment}
@@ -86,8 +89,10 @@
 \nocite{*}
 \begingroup
 \let\clearpage\relax
-\printbibliography[sorting=hot,filter=staticdeviation,keyword={rev},title={\textcolor{violetw}{Biblio about ''Deviazioni da equlibrio idrostatico: campo magnetico, rotazione, trasporto momento angolare, turbolenza''}}]
-\printbibliography[sorting=hot,filter=staticdeviation, notkeyword={rev},title={\textcolor{violetw}{Other refs about ''Deviazioni da equlibrio idrostatico: campo magnetico, rotazione, trasporto momento angolare, turbolenza''}}]
+
+\printbibliography[filter=staticdeviation,keyword={rev},title={\textcolor{violetw}{Biblio about ''Deviazioni da equlibrio idrostatico: campo magnetico, rotazione, trasporto momento angolare, turbolenza''}}]
+
+\printbibliography[filter=staticdeviation, notkeyword={rev},title={\textcolor{violetw}{Other refs about ''Deviazioni da equlibrio idrostatico: campo magnetico, rotazione, trasporto momento angolare, turbolenza''}}]
 \endgroup
 
 \end{refsegment}
@@ -99,8 +104,9 @@
 \nocite{*}
 \begingroup
 \let\clearpage\relax
-\printbibliography[sorting=hot,filter=ssmunphys,keyword={rev},title={\textcolor{Veronica}{Biblio about: ''Incertezze nei parametri e nella fisica usata nel SSM''}}]
-\printbibliography[sorting=hot,filter=ssmunphys,notkeyword={rev},title={\textcolor{Veronica}{Other refs about: ''Incertezze nei parametri e nella fisica usata nel SSM''}}]
+
+\printbibliography[filter=ssmunphys,keyword={rev},title={\textcolor{Veronica}{Biblio about: ''Incertezze nei parametri e nella fisica usata nel SSM''}}]
+\printbibliography[filter=ssmunphys,notkeyword={rev},title={\textcolor{Veronica}{Other refs about: ''Incertezze nei parametri e nella fisica usata nel SSM''}}]
 \endgroup
 
 \end{refsegment}
