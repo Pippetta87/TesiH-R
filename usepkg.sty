@@ -36,6 +36,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{antiquefuchsia}{rgb}{0.57, 0.36, 0.51}
+\definecolor{violetw}{rgb}{0.93, 0.51, 0.93}
+\definecolor{veronica}{rgb}{0.63, 0.36, 0.94}
 
 \usepackage{braket}
 \usepackage{booktabs} %% better tabs
@@ -73,7 +75,11 @@ shadows
 \sort{\field{name}}
 }
 
-\defbibfilter{staticdeviation}{keyword={rotation} or keyword={magnetic field} or keyword={angular momentum}}
+\defbibfilter{staticdeviation}{notkeyword={rev} and {keyword={rotation} or keyword={magnetic field} or keyword={angular momentum}}}
+\defbibfilter{Staticdeviation}{keyword={rev} and {keyword={rotation} or keyword={magnetic field} or keyword={angular momentum}}}
+
+\defbibfilter{ssmunphys}{notkeyword={rev} and {keyword={convection} or keyword={composition} or keyword={metallicity}}}
+\defbibfilter{Ssmunphys}{keyword={rev} and {keyword={convection} or keyword={composition} or keyword={metallicity}}}
 
 \usepackage{csquotes}
 %http://tex.stackexchange.com/questions/39285/whats-the-advantage-of-using-csquotes-over-using-an-editors-auto-replacement-f
