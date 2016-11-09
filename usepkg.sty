@@ -71,12 +71,15 @@ shadows
 %%%biblatex
 \usepackage[backend=biber,sorting=hot,maxbibnames=1,style=authoryear]{biblatex}
 
+%%% biblatex sorting schemes
 \DeclareSortingScheme{hot}{
 \sort{\field{year}}
 \sort{\field{name}}
 }
 
-\defbibfilter{staticdeviation}{keyword={rotation} or keyword={magnetic field} or keyword={angular momentum}}
+%%biblatex filters
+\defbibfilter{staticdeviation}{keyword={rotation} or keyword={magnetic field} or keyword={angular momentum} or keyword={turbulence} or keyword={hydrodynamics}}
+
 \defbibfilter{eos}{keyword={eos} or keyword={atomic} or keyword={DH}}
 \defbibfilter{radiativetransport}{keyword={opacity} or keyword={composition} or keyword={metallicity}}
 \defbibfilter{convection}{keyword={entropy} or keyword={turbulence} or keyword={convection} or keyword={hydrodynamics}}
