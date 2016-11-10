@@ -64,13 +64,17 @@ shadows
 \usepackage{pgfplots}
 \usepackage{fp}
 
-\usepackage{csquotes}
-%http://tex.stackexchange.com/questions/39285/whats-the-advantage-of-using-csquotes-over-using-an-editors-auto-replacement-f
-%%%%%
-
 %%%biblatex
 \usepackage[backend=biber,sorting=hot,maxbibnames=1,style=authoryear]{biblatex}
 
+\renewcommand*{\bibsetup}{% bibsetup
+  \interlinepenalty=10000\relax % default is 5000
+  \widowpenalty=10000\relax
+  \clubpenalty=10000\relax
+  \raggedbottom
+  \frenchspacing
+  \biburlsetup}
+  
 %%% biblatex sorting schemes
 \DeclareSortingScheme{hot}{
 \sort{\field{year}}
@@ -87,6 +91,10 @@ shadows
 \defbibfilter{stellarplasma}{keyword={plasma} or keyword={diffusion} or keyword={coupling} or keyword={DH} or keyword={transport}}
 \defbibfilter{ssmunphys}{keyword={calibration} or keyword={uncertainties} or keyword={input parameters} or keyword={composition}}
 \defbibfilter{doppler}{keyword={modes} or keyword={doppler} or keyword={observations} or keyword={splitting}} %% doppler da definire
+
+\usepackage{csquotes}
+%http://tex.stackexchange.com/questions/39285/whats-the-advantage-of-using-csquotes-over-using-an-editors-auto-replacement-f
+%%%%%
 
 \usepackage[normalem]{ulem} % either use this (simple) or
 \usepackage{hepnames}
