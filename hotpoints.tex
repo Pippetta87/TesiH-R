@@ -5,6 +5,11 @@
 % the tikz-er2.sty package is available at:
 % http://tagus.inesc-id.pt/~pcalado/tikzer2/tikz-er2.
 
+\chapter{Visual SSM}
+\PartialToc
+
+\section{SSM e HSSSM}
+
 \begingroup %%% grafico tikz generale
 
 \tikzstyle{every entity} = [fill=blue!30, draw=blue!50!black!100, drop shadow,text width=2cm]
@@ -65,6 +70,7 @@
 \newrefcontext[sorting=hot]
 
 \chapter{Modello solare}
+\PartialToc
 
 \begin{refsection}[solarmodels.bib]
 
@@ -181,19 +187,76 @@ Modelli convezione ???
 
 \endgroup
 
-\section{Fenomeni di trasporto}
+\section{Non uniform state for gas mixture}
 
 
-\subsection{Urti}
 
-Opacit\'a vs diffusione
+\subsection{Boltzmann's equation}
 
-\subsection{''Perturbazioni distribuzione di equilibrio''}
+\begin{align*}
+&\PDy{t}{f_1}+\vec{c}_1\cdot\PDy{\vec{r}_1}{f_1}+\vec{F}_1\cdot\PDy{\vec{c}_1}{f_1}=\left(\PDy{t}{f_1}\right)_c\\
+&\PDy{t}{f_2}+\vec{c}_2\cdot\PDy{\vec{r}_2}{f_2}+\vec{F}_2\cdot\PDy{\vec{c}_2}{f_2}=\left(\PDy{t}{f_2}\right)_c&\intertext{dove:}\\
+&
+\end{align*}
 
-\subsection{Diffusione binaria}
+\subsection{Entropy}
+
+For a gas in uniform steady state
+
+\begin{align*}
+&H=\int f\ln{f}\,d^3c=n\overline{\ln{f}}\\
+&=n[\ln{n}+\frac{3}{2}\ln{\frac{m}{2\pi kT}}-\frac{3}{2}]&\intertext{Con $M$ total mass of the gas and $\midfrac{M}{\rho}=\midfrac{M}{nm}$}\\
+&H_0=\int H\,d^r=\frac{M}{m}[\ln{n}+\frac{3}{2}\ln{\frac{m}{2\pi kT}}-\frac{3}{2}]\\
+&(pg80-81)\\
+&S=-kH_0
+\end{align*}
+
+\subsection{Definition/Notation: binary encounters}
+
+$\vec{c}_1,\vec{c}_2$ denote velocity, and $\vec{c}_1',\vec{c}_2'$ denotes velocities of two molecules after encounter
+
+\begin{align*}
+&m_0=m_1+m_2,M_1=\frac{m_1}{m_0},M_2=\frac{m_2}{m_0}&\intertext{the center of mass of the two molecules will move uniformly throughout the encounter: its constant velocity is give by}\\
+&m_0\vec{G}=m_1\vec{c}_1+m_2\vec{c}_2=m_1\vec{c}_1'+m_2\vec{c}_2'&\intertext{the relative velocity of second resp. to first and viceversa,before and after encounter, are}\\
+&\vec{g}_{21}=\vec{c}_2-\vec{c}_1=-\vec{g}_{12},\ \vec{g}_{21}'=\vec{c}_2'-\vec{c}_1'=-\vec{g}_{12}'&\intertext{thus}\\
+&\vec{c}_1=\vec{G}+M_2\vec{g}_{12}, \vec{c}_2=\vec{G}+M_1\vec{g}_{21}\\
+&\vec{c}_1'=\vec{G}+M_2\vec{g}_{12}', \vec{c}_2'=\vec{G}+M_1\vec{g}_{21}'
+\end{align*}
+
+Let $\vec{k}$ be a unit vector in the direction connecting the center of mass of second molecule at closest approach to the first in a system in which the last one is at rest
+\begin{align*}
+&\vec{g}_{21}-\vec{g}_{21}'=2(\vec{g}_{21}\cdot\vec{k})\vec{k}=-2(\vec{g}_{21}'\cdot\vec{k})\vec{k}\\
+&\vec{c}_1'-\vec{c}_1=2M_2(\vec{g}_{21}\cdot\vec{k})\vec{k}=-2M_2(\vec{g}_{21}'\cdot\vec{k})\vec{k}\\
+&\vec{c}_2'-\vec{c}_2=-2M_1(\vec{g}_{21}\cdot\vec{k})\vec{k}=2M_1(\vec{g}_{21}'\cdot\vec{k})\vec{k}
+\end{align*}
+
+\subsection{Definition/Notation: Integrals}
+
+Sia $F(\vec{c})$
+\begin{align*}
+&n_1^2I_1(F)=\iint f_1^{(0)}f^{(0)}(F_1+F-F_1'-F')\,d^3k\,d^3c\\
+&[F,G]_1=\int G_1I_1(F)\,d^3c_1\\
+&[F_1+G_2,H_1+K_2]_{12}=\int F_1I_{12}(H_1+K_2)\,d^3c_1+\int G_2I_{21}(H_1+K_2)\,d^3c_2\\
+&n_1n_2\{F,G\}=n_1^2[F,G]_1+n_1n_2[F_1+F_2,G_1+G_2]_{12}+n_2^2[F,G]_2
+\end{align*}
 
 
-\subsection{Equazioni di Burgers}
+\subsection{Changes of molecular properties}
+
+\begin{align*}
+&\MDy{(n_1\overline{\phi}_1)}+n_1\overline{\phi}_1\PDof{\vec{r}}\cdot\vec{c}_0\\
+&-n_1\left\{ \MDy{\overline{\phi}_1}\overline{\vec{C}_1\cdot\PDy{\vec{r}}{\phi_1}}+(\vec{F}_1-\MDy{\vec{c}_0})\cdot\overline{\PDy{\vec{C}_1}{\phi_1}}\right.\\
+&\left.-\overline{\PDy{\vec{C}_1}{\phi_1}\vec{C}_1}:\PDof{\vec{r}}\vec{c}_0\right\}=n_1\Delta\overline{\phi_1}
+\end{align*}
+
+
+\subsection{Diffusion and thermal diffusion}
+(\cite[pp. 143-144]{chapman52gas})
+
+\begin{align*}
+&\overline{\vec{c}_1}-\overline{\vec{c}_2}=\overline{\vec{C}_1}-\overline{\vec{C}_2}=\frac{1}{n_1}\int f_1C_1\,d^3c_1-\frac{1}{n_2}\int f_2C_2\,d^3c_2\\
+&=-\frac{1}{3}n_1n_2[\{\vec{D},\vec{D}\}n\vec{d}_{12}+\{\vec{D},\vec{A}\}\PDy{\vec{r}}{\ln{T}}]
+\end{align*}
 
 
 \end{refsection}
