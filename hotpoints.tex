@@ -69,7 +69,8 @@
 
 \newrefcontext[sorting=hot]
 
-\chapter{Modello solare}
+{\let\clearpage\relax
+\chapter{Modello solare}}
 \PartialToc
 
 \begin{refsection}[solarmodels.bib]
@@ -278,13 +279,24 @@ Sia $F(\vec{c})$
 
 \subsection{Calibrazione modello solare}
 
+incertezza su $S_{11}$
+incertezza composizione
+\begin{itemize*}
+\item pressione gas
+\item pressione turbolenta == kinetic pressure
+\item radiation pressure $-->$ photon absorption
+\item magnetic pressure
+\end{itemize*}
+tabella input del mss: eta, luminosita, raggio,
+Incertezze negli input del SSM e quindi su $\alpha$ e $Y$
+
 \subsection{Problema con minore metallicit\'a}
 
 \end{refsection}
 
 
-
-\chapter{Modi normali: osservazione e tecniche inversione}
+{\let\clearpage\relax
+\chapter{Oscillazioni solari: osservazione, frequency splitting. Modi normali, LAWE, matematica dei modi normali, eccitazione dei modi.}}
 \PartialToc
 
 \begin{refsection}[SModes.bib,waves.bib,HAseismRev.bib,VstarsRev.bib]
@@ -297,7 +309,16 @@ Sia $F(\vec{c})$
 
 \section{Problematiche osservative}
 
+Na $D$ lines: $\lambda=\SI{589.6}{\nano\meter},\SI{589.0}{\nano\meter}$; SOHO (MDI): Ni \SI{678.8}{\nano\meter}; K Fraunhofer line \SI{770}{\nano\meter}; Ca \SI{643.9}{\nano\meter}; K \SI{769.9}{\nano\meter}
+
 \subsection{Doppler measurement: resonant scattering cell (GOLF)}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+\centering
+\includegraphics[keepaspectratio,width=0.4\textwidth]{scatteringcell}
+\caption{Principio funzionamento spettroscopio scatering risonante. Da \cite{brookes1978resonant}.}
+\end{wrapfigure}
+
 \subsection{separazione contributi modi}
 \subsection{Frequency precision}
 
@@ -315,6 +336,15 @@ Sia $F(\vec{c})$
 
 
 \end{refsection}
+{\let\clearpage\relax
+\chapter{Oscillazioni solari: tecniche di inversione e fit. HSSM. Oltre il SSM.}}
+\PartialToc
 
+\begin{refsection}[HelioInversion.bib,beyond.bib]
+
+
+\end{refsection}
+
+\stopcontent[chapter]
 
 \end{document}
