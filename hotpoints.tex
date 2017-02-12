@@ -333,6 +333,7 @@ Principio funzionamento spettroscopio scatering risonante. Da \cite{brookes1978r
 
 \section{First order degenerate perturbation: ROTATION.}
 
+\renewcommand{\footrefs}{Refs: \authoryear{ritzwoller1991unified}}
 
 \subsection{Approccio perturbativo: Degenerate perturbation}
 
@@ -352,8 +353,25 @@ La soluzione del problema diretto (determinazione degli splitting in m) che sar\
 Decomposizione di laminar velocity field into poiloidal and toroidal component $\vec{P}$ and $\vec{T}$
 \begin{align*}
 &\vec{v}_{rot}=\vec{\Omega}(r,\theta,\phi)\wedge\vec{r}\\
-=\sumzi{s}\sumft{t=-s}{s}[\vec{P}_t^s(r,\theta,\phi)+T_s^t(r,\theta,\phi)]
-\end{align}
+&=\sumzi{s}\sumft{t=-s}{s}[\vec{P}_t^s(r,\theta,\phi)+T_s^t(r,\theta,\phi)]
+\end{align*}
+
+Le funzioni $P$ e $T$ sono caratterizzate dai coefficienti dipendenti da r dell'espansione in armoniche sferiche $u_s^t(r)$, $v_s^t(r)$, $w_s^t(r)$:
+\begin{align*}
+&\vec{P}_t^s(r,\theta,\phi)=u_s^t(r)Y_s^t(\theta,\phi)\hat{r}+v_s^t(r)\nabla_1Y_s^t(\theta,\phi)\\
+&\vec{T}_t^s(r,\theta,\phi)=-w_s^t(r)\hat{r}\wedge\nabla_1Y_s^t(\theta,\phi)\\
+&\nabla_1=r[\nabla-\hat{r}(\hat{r}\cdot\nabla)]
+\end{align*}
+
+\begin{definition}{Funzioni armoniche sferiche vettoriali}
+
+\begin{align*}
+
+\end{align*}
+
+\end{definition}
+
+\renewcommand{\footrefs}{{}}
 
 \subsection{Misurazione spitting dei modi dovuto alla rotazione e campi magnetici interni}
 
