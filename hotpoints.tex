@@ -10,7 +10,7 @@
 \section{All tesi keywords}
 
 \begingroup
-%\nocite{*}
+\nocite{*}
 \let\clearpage\relax
 \printbibliography[filter=tesirappels,title={\textcolor{brilliantlavender}{Da mettere in SOS}}]
 \endgroup
@@ -333,7 +333,7 @@ Principio funzionamento spettroscopio scatering risonante. Da \cite{brookes1978r
 
 \section{First order degenerate perturbation: ROTATION.}
 
-\renewcommand{\footrefs}{Refs: \authoryear{ritzwoller1991unified}}
+\renewcommand{\footrefs}{Refs: \cite{ritzwoller1991unified}}
 
 \subsection{Approccio perturbativo: Degenerate perturbation}
 
@@ -345,7 +345,7 @@ La soluzione del problema diretto (determinazione degli splitting in m) che sar\
 
 \begin{align*}
 &\Omega(r,\theta)=\sum_{k=0,2,4,\ldots}\Omega_k(r)P_k(\cos{\theta})\\
-&\omega_{nl}^m=\omega_{nl}+l\sum_{i=1}^M_na_{li}P_i(\midfrac{m}{l})
+&\omega_{nl}^m=\omega_{nl}+l\sum_{i=1}^M\tensor[_n]{a}{_l_i}P_i(\midfrac{m}{l})
 \end{align*}
 
 \subsection{Forward problem: uso delle armoniche sferiche vettoriali}
@@ -361,14 +361,14 @@ Le funzioni $P$ e $T$ sono caratterizzate dai coefficienti dipendenti da r dell'
 &\vec{P}_t^s(r,\theta,\phi)=u_s^t(r)Y_s^t(\theta,\phi)\hat{r}+v_s^t(r)\nabla_1Y_s^t(\theta,\phi)\\
 &\vec{T}_t^s(r,\theta,\phi)=-w_s^t(r)\hat{r}\wedge\nabla_1Y_s^t(\theta,\phi)\\
 &\nabla_1=r[\nabla-\hat{r}(\hat{r}\cdot\nabla)]=\hat{\theta}\PDof{\theta}+\frac{\hat{\phi}}{\sin{\theta}}\PDof{\phi}\\
-&Y_s^t(\theta,\phi)=(-1)^t[\frac{2s+1}{4\pi}\frac{(t-s)!}{(t+s)!}]\expy{\nidfrac{1}{2}}P_s^t(\cos{\theta}
+&Y_s^t(\theta,\phi)=(-1)^t[\frac{2s+1}{4\pi}\frac{(t-s)!}{(t+s)!}]\expy{\midfrac{1}{2}}P_s^t(\cos{\theta}
 )\exp{it\phi}
 \end{align*}
 
 \begin{definition}{Funzioni armoniche sferiche vettoriali}
 
 \begin{align*}
-
+&ttt
 \end{align*}
 
 \end{definition}
