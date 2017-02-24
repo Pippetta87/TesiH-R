@@ -21,7 +21,17 @@
 \defbibfilter{tesirappels}{keyword={tesi}}%%% cose da usare in SOS ora
 %%%
 
-\defbibfilter{modesfreqobs}{keyword={rotation} and (keyword={splitting} or keyword={instruments} or keyword={splitting} or keyword={modes} or keyword={frequencies})}
+
+\defbibcheck{modesfreqobs}{%
+%           \iffieldequals
+%  \ifkeyword{⟨keyword⟩}{⟨true⟩}{⟨false⟩}
+\ifboolexpr{
+(test {\ifkeyword{splitting}} or test {\ifkeyword{instruments}} or test {\ifkeyword{modes}} or test {\ifkeyword{frequencies}}) and test {\ifkeyword{rotation}}
+
+}{}{\skipentry}
+}
+
+%\defbibfilter{modesfreqobs}{keyword={rotation} and (keyword={splitting} or keyword={instruments} or keyword={splitting} or keyword={modes} or keyword={frequencies})}
 
 \defbibfilter{SSMinout}{keyword={SSM} or keyword={uncertainties} or keyword={Y} or keyword={ssm input} or keyword={calibration} or keyword={He} or keyword={input parameters} or keyword={ssm} or keyword={astrophysical factor} or keyword={nuclear reactions}}
 
