@@ -26,7 +26,7 @@
 %           \iffieldequals
 %  \ifkeyword{⟨keyword⟩}{⟨true⟩}{⟨false⟩}
 \ifboolexpr{
-(test {\iffieldequals{splitting}{\thefield{keyword}}} or test {\iffieldequals{instruments}{\thefield{keyword}}} or test {\iffieldequals{modes}{\thefield{keyword}}} or test {\iffieldequals{frequencies}{\thefield{keyword}}}) and test {\iffieldequals{rotation}{\thefield{keyword}}}
+(test {\iffieldequalstr{keyword}{splitting}} or test {\iffieldequalstr{keyword}{instruments}} or test {\iffieldequalstr{keyword}{modes}} or test {\iffieldequalstr{keyword}{frequencies}}) and test {\iffieldequalstr{keyword}{rotation}}
 }{}{\skipentry}
 }
 
