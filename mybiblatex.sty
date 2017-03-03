@@ -22,13 +22,13 @@
 %%%%
 
 
-\defbibcheck{modesfreqobs}{%
+%\defbibcheck{modesfreqobs}{%
 %           \iffieldequals
 %  \ifkeyword{⟨keyword⟩}{⟨true⟩}{⟨false⟩}
-\ifboolexpr{
-(test {\iffieldequalstr{keyword}{splitting}} or test {\iffieldequalstr{keyword}{instruments}} or test {\iffieldequalstr{keyword}{modes}} or test {\iffieldequalstr{keyword}{frequencies}}) and test {\iffieldequalstr{keyword}{rotation}}
-}{}{\skipentry}
-}
+%\ifboolexpr{
+%(test {\iffieldequalstr{keyword}{splitting}} or test {\iffieldequalstr{keyword}{instruments}} or test {\iffieldequalstr{keyword}{modes}} or test {\iffieldequalstr{keyword}{frequencies}}) and test {\iffieldequalstr{keyword}{rotation}}
+%}{}{\skipentry}
+%}
 
 %\defbibfilter{modesfreqobs}{keyword={rotation} and (keyword={splitting} or %keyword={instruments} or keyword={splitting} or keyword={modes} or %keyword={frequencies})}
 
