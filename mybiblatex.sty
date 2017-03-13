@@ -17,21 +17,24 @@
 \sort{\field{name}}
 }
 
+%%hedings
+\defbibheading{bibsec}[\bibname]{% heading section
+\section{#1}%
+%\markboth{#1}{#1}
+}
+
 %%biblatex filters
 \defbibfilter{tesirappels}{keyword={tesi}}%%% cose da usare in SOS ora
 %%%%
 
-%           \iffieldequals
-%  \ifkeyword{⟨keyword⟩}{⟨true⟩}{⟨false⟩}
-
-%\defbibcheck{modesfreqobs}{%
-%\ifboolexpr{
-%test {\iffieldequalstr{keyword}{splitting}}
-%(test {\iffieldequalstr{keywords}{splitting}} or test {\iffieldequalstr{keyword}{instruments}} or test {\iffieldequalstr{keyword}{modes}} or test {\iffieldequalstr{keyword}{frequencies}}) and test {\iffieldequalstr{keyword}{rotation}}
-%}{}{\skipentry}
-%}
-
+%\iffieldequals
+%\ifkeyword{⟨keyword⟩}{⟨true⟩}{⟨false⟩}
 %\defbibfilter{modesfreqobs}{keyword={rotation} and (keyword={splitting} or %keyword={instruments} or keyword={splitting} or keyword={modes} or %keyword={frequencies})}
+%\iffieldequalstr{keyword}{rotation}
+
+\defbibcheck{modesfreqobs}{\ifboolexpr{(test {\ifkeyword{splittings}} or test {\ifkeyword{instruments}} or test {\ifkeyword{keyword}{modes}} or test {\ifkeyword{frequencies}} or test {\ifkeyword{g-modes}} or test {\ifkeyword{p-modes}} or test {\ifkeyword{rotation}}) and test {\ifkeyword{rotation}}}{}{skip\skipentry}}%
+
+\defbibfilter{rotationinversion}{keyword={2D} or keyword={1.5D} or keyword={1D} or keyword={rotation}}
 
 \defbibfilter{smodesexcitation}{keyword={excitation} or keyword={line width} or keyword={damping} or keyword={non adiabatic}}
 
