@@ -15,6 +15,7 @@
 \definecolor{lemon}{rgb}{1.0, 0.97, 0.0}
 \definecolor{grey}{rgb}{0.7, 0.75, 0.71}
 \definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\definecolor{almond}{rgb}{0.94, 0.87, 0.8}
 
 \errorcontextlines=3%debugbiblatex
 
@@ -85,27 +86,27 @@
 
 \part{Cosa fare?}
 
-%\subfile{intro}
+%\input{intro}
 
 \part{Tesina}
 
-%\subfile{heliointro}
-%\subfile{SSMintro}
+\input{heliointro}
+%\input{SSMintro}
 
-%\subfile{waves1}
-%\subfile{waves2}
+%\input{waves1}
+%\input{waves2}
 
 \subfile{inversion}
 
 \part{Onde in atmosfera/interno/vento stellare}
 
-%\subfile{intromhd}
-%\subfile{sunwaves}
+\input{intromhd}
+\input{sunwaves}
 
 \appendix
 \part{Appendice}
 
-%\subfile{appendix}
+%\input{appendix}
 
 \clearpage
 \addcontentsline{toc}{section}{Index}
