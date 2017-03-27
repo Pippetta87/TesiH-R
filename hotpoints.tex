@@ -317,7 +317,70 @@ Incertezze negli input del SSM e quindi su $\alpha$ e $Y$
 
 \endgroup
 
+\subsection{Power spectra of p-modes}
+
+Un modello per descrivere l'eccitatazione dei modi p alle ampiezze osservate descrive l'interazione tra i modi e i moti turbolenti dovuti alla convezione tramite un insieme di oscillatori smorzati di frequenze naturali $\omega_{nl}$ e sottoposti a forzante stocastica: trascuro gli effetti non lineari e eventuali instabilit\'a intrinche alle pulsazioni.
+\begin{equation}
+I_{nl}[\TtwoDy{t}{\xi_{nl}}+\Gamma_{nl}\TDy{t}{\xi_{nl}}+\omega_0^2\xi_{nl}]=f(t)
+\end{equation}
+con $\xi_{nl}$ ampiezza dell'oscillatore, $\midfrac{\Gamma}{2}=\Im{\omega}$ costante di smorzamento e definisco l'inerzia del modo
+\begin{equation}
+I_{nl}=\int d^3x\rho_0(\vec{\xi}^*\cdot\vec{\xi})\label{eq:modeinertia}
+\end{equation}
+La funzione $f(t)$ contiene il contributo dei moti turbolenti e fluttuazioni entropia causati dai moti convettivi.
+
+Assumendo $\omega_{nl}\gg\Gamma_{nl}$, cio\'e gli scambi di energia tra i modi e la turbolenza hanno tempo caratteristico $\tau_{nad}\gg\Pi_{osc}$, lo spettro in frequenza dell'oscillatore $\exv{P(\omega)}=\exv{|\xi_{nl}(\omega)|^2}$ \'e della forma:
+\begin{equation}
+\exv{P(\omega)}\propto P_LP_f=\frac{\midfrac{\Gamma_{nl}}{2\pi}}{(\omega-\omega_0)^2+\midfrac{\Gamma_{nl}}{4}}P_f
+\end{equation}
+
+\begin{wrapfigure}[20]{r}{0.5\textwidth}
+\centering
+\includegraphics[keepaspectratio,width=0.4\textwidth]{modespheomenology}
+\caption{FWHM per i modi osservati, $V_{nl}$, energia totale per modi con $l\approx20$. Da \cite{libbrecht1988solar}.}\label{fig:modespheomenology}
+\end{wrapfigure}
+
+La media temporale dell'energia di un modo \'e
+\begin{align}
+%E_{\omega_0}=\int_0^M\exv{v_{osc}^2}
+&E_{nl}=I_{nl}V_{nl}^2\\
+&=\frac{1}{2}I_{nl}\omega_{nl}\exv{|A_{nl}^2|}\propto I_{nl}\omega_{nl}\intsinf{}P(\omega)\,d\omega\\
+&\propto\frac{P_f(\omega_{nl})}{\Gamma_{nl}}
+\end{align}
+
+[$H=\int_{-\delta}^{+\delta}|\tilde{V}(\nu)|^2\,d\nu$]
+
+\begin{comment}%% Da finire oscillazioni
+[Si ipotizza che le oscillazioni siano eccitate in maniera stocastica dai moti convettivi: la larghezza delle frequenze risonanti \'e determinata dal tempo di smorzamento.]
+
+[Extensive turbolent layers: stars lose all hint of vibrational instability]
+
+[Not self excited: driven to observable amplitude by external process]
+
+[Turbolent convection: source of pulsational energy, emit acustic radiation]
+
+[Stable pulsation: spectrum as that of an ensemble of harmonic oscillator stocastically driven and damped]
+
+[Power spectrum indipendent of l for $l<100$: low degree modes are not influenced by $k_h$. Vertical propagation: superficial layers (low l modes are generated in these strata)]
+
+
+[Interaction with turbolent convection]
+
+[Radiative transfer (as frequencies rise modes became more sensitive to rapid relaxation time in solar atmosphere)]
+
+[La stabilit\'a dei modi g \'e determinata dalla stabilit\'a convettiva: se non sono presenti regioni di instabilit\'a convettiva i modi g sono stabili ($g_+$), se esistono zone convettivamente instabili esistono anche modi g instabili ($g_{\,-}$).]
+\end{comment}
+
+[Excitation p-modes: fluctuating turbolent pressure (Raynold stresses). Excitation g-modes: nuclear burning instabilities. Damping: radiative losses, viscosity, nonlinear interaction between modes.]
+
+[Low l p-modes exponential decay with e-folding time several days.]
+
+
+
 \subsection{Turbolenza: eccitazione stocastica e viscosit\'a}
+
+
+
 \subsection{tempo di vita: damping}
 \subsection{Effetti non lineari}
 \subsection{Overstability vs stochastic excitation}
