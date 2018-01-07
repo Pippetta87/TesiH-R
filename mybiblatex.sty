@@ -32,6 +32,19 @@
 %\defbibfilter{modesfreqobs}{keyword={rotation} and (keyword={splitting} or %keyword={instruments} or keyword={splitting} or keyword={modes} or %keyword={frequencies})}
 %\iffieldequalstr{keyword}{rotation}
 
+\defbibfilter{solsysplanets}{keyword={planets} or keyword={planet} or keyword={solar system} or keyword={planet interior}}
+
+
+\defbibfilter{terrestrialplanets}{keyword={terrestrial planets} or keyword={terrestrial planets} or keyword={Earth} or keyword={Mercury} or keyword={Venus} or keyword={Mars}}
+
+\defbibfilter{gasseousgiants}{keyword={gasseous giants} or keyword={gasseous planets} or keyword={Jupiter} or keyword={Saturn}}
+
+\defbibfilter{icegiants}{keyword={ice giants} or keyword={ice planets} or keyword={Uranus} or keyword={Neptune}}
+
+\defbibfilter{NEOMBT}{keyword={NEO} or keyword={asteroids} or keyword={main belt} or keyword={MB} or keyword={trojans}}
+
+%%% SOS
+
 \defbibcheck{modesfreqobs}{\ifboolexpr{(test {\ifkeyword{splittings}} or test {\ifkeyword{instruments}} or test {\ifkeyword{keyword}{modes}} or test {\ifkeyword{frequencies}} or test {\ifkeyword{g-modes}} or test {\ifkeyword{p-modes}} or test {\ifkeyword{rotation}}) and test {\ifkeyword{rotation}}}{}{\skipentry}}%
 
 \defbibfilter{rotationinversion}{keyword={2D} or keyword={1.5D} or keyword={1D} or keyword={rotation}}
